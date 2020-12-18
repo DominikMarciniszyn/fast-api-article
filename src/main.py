@@ -11,4 +11,10 @@ def ping():
 
 @app.get('/example')
 async def example_endpoint():
-    return {'result': 'Example'}
+    return { 'result': 'Example' }
+
+
+@app.get('/users/{user_id}')
+async def get_user(user_id: int):
+    return { 'user_id': user_id }
+
